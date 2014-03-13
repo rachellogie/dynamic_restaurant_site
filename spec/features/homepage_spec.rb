@@ -11,7 +11,9 @@ describe 'Visiting the home page' do
   it "displays the year dynamically" do
     visit "/"
 
-    expect(page).to have_content("2014")
+    within("footer") do
+      expect(page).to have_content("2014")
+    end
   end
   
 end
