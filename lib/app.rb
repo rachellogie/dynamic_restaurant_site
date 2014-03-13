@@ -1,4 +1,7 @@
 require 'erb'
+#added this
+require 'item'
+require 'menu'
 
 class App
   def call(env)
