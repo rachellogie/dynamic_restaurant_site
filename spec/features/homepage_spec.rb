@@ -15,5 +15,7 @@ describe 'Visiting the home page' do
       expect(page).to have_content("2014")
     end
   end
-  
+
 end
+
+#this is testing the html file
