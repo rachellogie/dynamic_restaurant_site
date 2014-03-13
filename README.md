@@ -26,3 +26,7 @@ You can find them in the `spec/features` directory.
 ## Development
 
 NOTE: Whenever you change a ruby file, you need to stop the server, and restart it.
+
+## The URL to find my site on heroku:
+
+http://morning-atoll-9783.herokuapp.com/
