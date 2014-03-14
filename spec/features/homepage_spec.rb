@@ -19,7 +19,8 @@ describe 'Visiting the home page' do
   it "displays the pictures" do
     visit "/"
 
-    pending
+    page.should have_css('img')
+    #this is a horribly inaccurate test
 
   end
 

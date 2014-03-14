@@ -8,6 +8,8 @@ class Menu
 
     array = []
 
+    #this might not be the best way to do it because every time you call the items method it has to load and read the csv
+
     #need to create an item object out of every line and return an array of item objects
 
     CSV.foreach(File.expand_path('../dynamic_restaurant_site_original/config/menu.csv')) do |row|
