@@ -16,6 +16,13 @@ describe 'Visiting the home page' do
     end
   end
 
+  it "displays the pictures" do
+    visit "/"
+
+    pending
+
+  end
+
 end
 
 #this is testing the html file
