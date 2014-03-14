@@ -4,24 +4,27 @@ require "csv"
 
 class Menu
 
-  def items
-
-    array = []
-
-    #this might not be the best way to do it because every time you call the items method it has to load and read the csv
-
-    #need to create an item object out of every line and return an array of item objects
+  def initialize
+    @array = []
 
     CSV.foreach(File.expand_path('../dynamic_restaurant_site_original/config/menu.csv')) do |row|
       one,two,three,four = row
-      array << Item.new(one, two, three, four)
+      @array << Item.new(one, two, three, four)
     end
 
-    return array[1..-1]
+    @array = @array[1..-1]
 
-    #[
-    #  Item.new("Channa Masala", 5.95, "Yummy Goodness", "food1.jpg"),
-    #  Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness", "food1.jpg"),
-    #]
   end
+
+
+  def items
+    @array
+  end
+
+  def wednesday_items
+    @array.each do |item|
+      item.price = 5.35
+    end
+  end
+
 end
