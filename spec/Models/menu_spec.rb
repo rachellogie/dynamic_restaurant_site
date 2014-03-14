@@ -21,22 +21,6 @@ describe Menu do
     expect(actual).to eq expected
   end
 
-  it "Corrects the array to be 10% off" do
-
-    menu = Menu.new
-
-    actual = [
-      Item.new("Channa Masala", 5.35, "Yummy Goodness", "food1.jpg"),
-      Item.new("Chicken Tikka Masala", 5.35, "Yummy goodness", "food2.jpg"),
-      Item.new("Saag Paneer", 5.35, "Yummy Goodness", "food3.jpg"),
-      Item.new("Alu Gobi", 5.35, "Yummy goodness", "food4.jpg"),
-    ]
-
-    expected = menu.wednesday_items
-
-    expect(actual).to eq expected
-  end
-
 
 
 end

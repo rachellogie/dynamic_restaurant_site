@@ -7,7 +7,11 @@ class Item
 
   def initialize(name, price, description, pic)
     @name = name
-    @price = price
+    if Time.new.wednesday?
+      @price = (price.to_f * 0.9).round(2)
+    else
+      @price = price
+    end
     @description = description
     @pic = pic
   end

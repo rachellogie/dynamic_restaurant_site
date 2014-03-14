@@ -21,10 +21,5 @@ class Menu
     @array
   end
 
-  def wednesday_items
-    @array.each do |item|
-      item.price = 5.35
-    end
-  end
 
 end

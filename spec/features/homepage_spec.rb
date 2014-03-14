@@ -24,6 +24,16 @@ describe 'Visiting the home page' do
 
   end
 
+  it "displays wednesday prices on wednesday" do
+
+    if Time.new.wednesday?
+      expect(page).to have_content("5.35")
+    else
+      expect(page).to have_content("5.95")
+    end
+
+  end
+
 end
 
 #this is testing the html file
