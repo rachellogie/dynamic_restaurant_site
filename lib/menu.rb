@@ -1,3 +1,5 @@
+require "item"
+
 class Menu
 
   def items

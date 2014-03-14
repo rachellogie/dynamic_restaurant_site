@@ -31,11 +31,11 @@
   <img src="/images/food1.jpg">
 
   <dl>
-    <dt><%= Item.new("Channa Masala", 5.95, "Yummy goodness").name%> - <%= Item.new("Channa Masala", 5.95, "Yummy goodness").price%></dt>
-    <dd><%= Item.new("Channa Masala", 5.95, "Yummy goodness").description%></dd>
-
-    <dt><%= Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness").name%> - <%= Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness").price%></dt>
-    <dd><%= Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness").description%></dd>
+    <% menu = Menu.new %>
+    <% menu.items.each do |item| %>
+      <dt><%= item.name %> - <%= item.price %></dt>
+      <dd><%= item.description %></dd>
+    <% end %>
   </dl>
 </main>
 
