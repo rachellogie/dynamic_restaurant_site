@@ -44,14 +44,5 @@ describe Item do
     expect(actual).to eq expected
   end
 
-  #it "is 10% off on wednesday" do
-   # item = Item.new("Channa Masala", 5.95, "Yummy Goodness", "food1.jpg")
-
-  #  actual = 5.35
-
-   # expected = item
-
-   # expect(actual).to eq expected
-  #end
 
 end
