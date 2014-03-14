@@ -7,7 +7,7 @@ class Menu
   def initialize
     @array = []
 
-    CSV.foreach(File.expand_path('../dynamic_restaurant_site_original/config/menu.csv')) do |row|
+    CSV.foreach(File.expand_path('../config/menu.csv', __dir__)) do |row|
       one,two,three,four = row
       @array << Item.new(one, two, three, four)
     end
