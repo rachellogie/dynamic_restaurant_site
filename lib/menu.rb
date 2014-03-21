@@ -16,6 +16,7 @@ class Menu
 
     #maybe only include those items in the array where the 5th array item == the day it is
 
+
   end
 
   def items
@@ -24,7 +25,7 @@ class Menu
 
   def items_to_string(num)
     first_item = @array[num]
-    s = "#{first_item.name}, #{first_item.price}, #{first_item.description}, #{first_item.pic}"
+    s = "#{first_item.name}, #{first_item.price}, #{first_item.description}, #{first_item.pic}, #{first_item.day}"
     s
   end
 

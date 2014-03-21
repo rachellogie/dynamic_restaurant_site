@@ -49,5 +49,16 @@ describe Item do
     expect(actual).to eq expected
   end
 
+  it "has a default day of all" do
+    item = Item.new("Chicken Tikka Masala", 5.95, "Yummy Goodness", "food1.jpg")
+
+    actual = "all"
+
+    expected = item.day
+
+    expect(actual).to eq expected
+
+  end
+
 
 end

@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'timecop'
 
 describe 'Visiting the home page' do
   
@@ -26,14 +27,21 @@ describe 'Visiting the home page' do
 
   it "displays wednesday prices on wednesday" do
 
+    #Timecop.freeze(Time.local(2014,3,19))
     if Time.new.wednesday?
-      expect(page).to have_content("5.35")
+      expect(page).to have_content("5.36")
     else
       expect(page).to have_content("5.95")
     end
 
+    #Timecop.return
+
   end
 
+
 end
+
+
+
 
 #this is testing the html file
