@@ -33,10 +33,11 @@
   <dl>
     <% menu = Menu.new %>
     <% menu.items.each do |item| %>
-      <dt><%= item.name %> - <%= item.price %></dt>
-      <dd><%= item.description %></dd>
-      <dd><%= item.day %></dd>
-      <dd><img src="/images/<%= item.pic %>"></dd>
+      <% if item.day == Date.today.strftime("%A").downcase %>
+        <dt><%= item.name %> - <%= item.price %></dt>
+        <dd><%= item.description %></dd>
+        <dd><img src="/images/<%= item.pic %>"></dd>
+      <% end %>
     <% end %>
   </dl>
 </main>

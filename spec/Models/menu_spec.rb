@@ -25,7 +25,6 @@ describe Menu do
     expected = menu.items_to_string(1)
 
     expect(actual).to eq expected
-
   end
 
 

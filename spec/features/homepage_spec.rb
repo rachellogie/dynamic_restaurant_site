@@ -3,7 +3,8 @@ require 'timecop'
 
 describe 'Visiting the home page' do
   
-  it "displays all of the menu items" do
+  it "displays menu items" do
+    pending
     visit "/"
     expect(page).to have_content("Channa Masala")
     expect(page).to have_content("Chicken Tikka Masala")
@@ -25,7 +26,8 @@ describe 'Visiting the home page' do
 
   end
 
-  it "displays wednesday prices on wednesday" do
+  it "displays 10% off prices on wednesday" do
+    visit "/"
 
     #Timecop.freeze(Time.local(2014,3,19))
     if Time.new.wednesday?
@@ -35,6 +37,17 @@ describe 'Visiting the home page' do
     end
 
     #Timecop.return
+
+  end
+
+  it "displays thursday dishes on a thursday" do
+    visit "/"
+
+    if Time.new.thursday?
+      expect(page).to have_content("Channa Masala")
+    else
+      expect(page).to have_content("Saag Paneer")
+    end
 
   end
 
