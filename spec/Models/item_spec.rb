@@ -17,7 +17,12 @@ describe Item do
   it "has a price" do
     item = Item.new("Channa Masala", 5.95, "Yummy Goodness", "food1.jpg")
 
-    actual = 5.95
+    if Time.now.wednesday?
+      actual = 5.36
+    else
+      actual = 5.95
+    end
+
 
     expected = item.price
 
