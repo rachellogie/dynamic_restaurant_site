@@ -2,10 +2,10 @@
 
 class Item
 
-  attr_reader :name, :description, :pic, :day
+  attr_reader :name, :description, :pic
   attr_accessor :price
 
-  def initialize(name, price, description, pic, day='all')
+  def initialize(name, price, description, pic, day)
     @name = name
     if Time.new.wednesday?
       @price = (price.to_f * 0.9).round(2)
@@ -15,6 +15,14 @@ class Item
     @description = description
     @pic = pic
     @day = day
+  end
+
+  def day
+    if @day.nil?
+      "all"
+    else
+      @day
+    end
   end
 
   def == (other)

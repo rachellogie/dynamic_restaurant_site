@@ -5,7 +5,7 @@ require "item"
 describe Item do
 
   it "has a name" do
-    item = Item.new("Channa Masala", 5.95, "Yummy Goodness", "food1.jpg")
+    item = Item.new("Channa Masala", 5.95, "Yummy Goodness", "food1.jpg", nil)
 
    actual = "Channa Masala"
 
@@ -15,7 +15,7 @@ describe Item do
   end
 
   it "has a price" do
-    item = Item.new("Channa Masala", 5.95, "Yummy Goodness", "food1.jpg")
+    item = Item.new("Channa Masala", 5.95, "Yummy Goodness", "food1.jpg", nil)
 
     if Time.now.wednesday?
       actual = 5.36
@@ -30,7 +30,7 @@ describe Item do
   end
 
   it "has a description" do
-    item = Item.new("Channa Masala", 5.95, "Yummy Goodness", "food1.jpg")
+    item = Item.new("Channa Masala", 5.95, "Yummy Goodness", "food1.jpg", nil)
 
     actual = "Yummy Goodness"
 
@@ -40,7 +40,7 @@ describe Item do
   end
 
   it "has a picture" do
-    item = Item.new("Channa Masala", 5.95, "Yummy Goodness", "food1.jpg")
+    item = Item.new("Channa Masala", 5.95, "Yummy Goodness", "food1.jpg", nil)
 
     actual = "food1.jpg"
 
@@ -50,7 +50,7 @@ describe Item do
   end
 
   it "has a default day of all" do
-    item = Item.new("Chicken Tikka Masala", 5.95, "Yummy Goodness", "food1.jpg")
+    item = Item.new("Chicken Tikka Masala", 5.95, "Yummy Goodness", "food1.jpg", nil)
 
     actual = "all"
 

@@ -2,13 +2,7 @@ require 'spec_helper'
 require 'timecop'
 
 describe 'Visiting the home page' do
-  
-  it "displays menu items" do
-    pending
-    visit "/"
-    expect(page).to have_content("Channa Masala")
-    expect(page).to have_content("Chicken Tikka Masala")
-  end
+
 
   it "displays the year dynamically" do
     visit "/"

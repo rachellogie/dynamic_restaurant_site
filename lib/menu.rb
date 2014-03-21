@@ -12,10 +12,8 @@ class Menu
       @array << Item.new(one, two, three, four, five)
     end
 
+    #takes out the header line
     @array = @array[1..-1]
-
-    #maybe only include those items in the array where the 5th array item == the day it is
-
 
   end
 
