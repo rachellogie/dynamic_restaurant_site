@@ -8,19 +8,19 @@
 </head>
 <body>
 
+
 <header>The Foods of Southern India</header>
 
 <main>
   <% file = (File.expand_path("../config/paragraphs.txt", __FILE__)) %>
   <% text = File.open(file).read %>
   <p>
-    <% array = text.split(/_____/)          #array of 2 strings?  %>
-    <%= array[0] %>
+    <% array = text.split(/_____/)%>
+    <% array.each do |paragraph| %>
+       <p><%= paragraph %></p>
+    <% end %>
   </p>
 
-  <p>
-    <%= array[1] %>
-  </p>
   <img src="/images/food1.jpg">
 
   <dl>
