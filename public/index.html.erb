@@ -12,11 +12,8 @@
 <header>The Foods of Southern India</header>
 
 <main>
-  <% file = (File.expand_path("../config/paragraphs.txt", __FILE__)) %>
-  <% text = File.open(file).read %>
   <p>
-    <% array = text.split(/_____/)%>
-    <% array.each do |paragraph| %>
+    <% Blurb.new.arrayify.each do |paragraph| %>
        <p><%= paragraph %></p>
     <% end %>
   </p>
