@@ -11,7 +11,7 @@ describe Menu do
 
     actual =  "Channa Masala, 5.95, Yummy goodness, food1.jpg, thursday"
 
-    expected = menu.items_to_string(0)
+    expected = menu.items_to_string(5)
 
     expect(actual).to eq expected
   end
@@ -21,7 +21,7 @@ describe Menu do
 
     actual =  "Chicken Tikka Masala, 5.95, Yummy goodness, food2.jpg, all"
 
-    expected = menu.items_to_string(1)
+    expected = menu.items_to_string(0)
 
     expect(actual).to eq expected
   end

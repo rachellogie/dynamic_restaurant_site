@@ -1,17 +1,12 @@
-
+#require 'timecop'
 
 class Item
 
   attr_reader :name, :description, :pic
-  attr_accessor :price
 
   def initialize(name, price, description, pic, day)
     @name = name
-    if Time.new.wednesday?
-      @price = (price.to_f * 0.9).round(2)
-    else
-      @price = price
-    end
+    @price = price
     @description = description
     @pic = pic
     @day = day
@@ -22,6 +17,16 @@ class Item
       "all"
     else
       @day
+    end
+  end
+
+  def price
+    puts "HERE"
+    puts Date.today.wednesday?
+    if Date.today.wednesday?
+      (@price.to_f * 0.9).round(2)
+    else
+      @price
     end
   end
 

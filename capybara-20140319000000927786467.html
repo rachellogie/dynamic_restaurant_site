@@ -31,14 +31,24 @@
   <img src="/images/food1.jpg">
 
   <dl>
-    <% menu = Menu.new %>
-    <% menu.items.each do |item| %>
-      <% if item.day == Date.today.strftime("%A").downcase || item.day == "all" %>
-        <dt><%= item.name %> - <%= item.price %></dt>
-        <dd><%= item.description %></dd>
-        <dd><img src="/images/<%= item.pic %>"></dd>
-      <% end %>
-    <% end %>
+    
+    
+      
+    
+      
+    
+      
+        <dt>Saag Paneer - 5.95</dt>
+        <dd>Yummy goodness</dd>
+        <dd><img src="/images/food3.jpg"></dd>
+      
+    
+      
+        <dt>Alu Gobi - 5.95</dt>
+        <dd>Yummy goodness</dd>
+        <dd><img src="/images/food4.jpg"></dd>
+      
+    
   </dl>
 </main>
 
@@ -48,7 +58,7 @@
     Boulder, CO 80301
     <a href="mailto:bob@example.com">Contact Us</a>
   </address>
-  &copy; <%= Time.now.year %>
+  &copy; 2014
 </footer>
 
 </body>
