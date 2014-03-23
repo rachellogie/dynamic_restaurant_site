@@ -47,6 +47,13 @@ describe 'Visiting the home page' do
     end
   end
 
+  it "displays the text in paragraphs from the text file" do
+
+    paragraph = "Please join us and experience Authentic Indian Cuisine"
+
+    expect(page).to have_content(paragraph)
+  end
+
 
 end
 
